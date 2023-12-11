@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    .copy-button {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 18px;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      background-color: #3498db;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button class="copy-button" onclick="copyToClipboard()">Copy Coupon Code</button>
+
+  <script>
+    function copyToClipboard() {
+      const couponCode = "HFJQR3784";
+      const inputElement = document.createElement("input");
+      inputElement.value = couponCode;
+      document.body.appendChild(inputElement);
+      inputElement.select();
+      inputElement.setSelectionRange(0, 99999); // For mobile devices
+        document.execCommand("copy");
+        document.body.removeChild(inputElement);
+     alert("Coupon code copied: " + couponCode);
+    }
+  </script>
+</body>
+</html>
