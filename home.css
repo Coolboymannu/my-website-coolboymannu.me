@@ -2,6 +2,7 @@
 .intro-box {
     background-image: url('Images/home/intro-back-image.jpg');
     width: 100%;
+    background-repeat: no-repeat;
     height: 50vh;
     color: wheat;
     justify-content: space-evenly;
