@@ -75,7 +75,7 @@
                 <div class="pap">
                     VAC - Financial Literacy
                 </div> 
-                <a href="PYQ/Pyq-Pdfs/VAC - Financial Literacy [2022].pdf" class="download-button" download="VAC - Financial Literacy [2022]">Download Pyq</a>
+                <a href="PYQ/Pyq-Pdfs/VAC - Financial Literacy [2022].pdf" class="download-button" download="VAC - Financial Literacy [2022].pdf">Download Pyq</a>
             </div>
         </div>
     </div>
@@ -110,6 +110,44 @@
             listbox.classList.toggle('active');
         })
 
+        // donwnoad Notification
+        document.addEventListener('DOMContentLoaded', function () {
+            const downloadButtons = document.querySelectorAll('.download-button');
+
+            downloadButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    // Add a notification when the download button is clicked
+                    showNotification('Download started!', 'Your file is being downloaded.');
+
+                    // Simulate the download process
+                    setTimeout(function () {
+                        // Close the notification after a delay
+                        closeNotification();
+                    }, 3000); // Adjust the delay (in milliseconds) as needed
+                });
+            });
+
+            function showNotification(title, message) {
+                // Create a notification element
+                const notification = document.createElement('div');
+                notification.className = 'notification';
+                notification.innerHTML = `
+                    <h4>${title}</h4>
+                    <p>${message}</p>
+                `;
+
+                // Append the notification to the body
+                document.body.appendChild(notification);
+            }
+
+            function closeNotification() {
+                // Remove the notification after a delay
+                const notification = document.querySelector('.notification');
+                if (notification) {
+                    notification.remove();
+                }
+            }
+        });
 
     </script>
 </body>

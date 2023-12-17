@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+    <title>Download Button</title>
+</head>
+<body>
+
+    <a id="downloadButton" href="Notes/Notes-PDFs/Python - Fundamentals Programming Using Python Notes by Coolboymannu.pdf">Download</a>
+
+    <script>
+        document.getElementById('downloadButton').addEventListener('click', function(event) {
+            event.preventDefault();
+
+            // Create an invisible anchor element
+            var downloadLink = document.createElement('a');
+
+            // Set the download link's attributes
+            downloadLink.href = 'path/to/your/file'; // Replace with the actual file path or URL
+            downloadLink.download = 'your-file-name'; // Replace with the desired file name
+
+            // Append the link to the body
+            document.body.appendChild(downloadLink);
+
+            // Trigger a click on the link
+            downloadLink.click();
+
+            // Remove the link from the body
+            document.body.removeChild(downloadLink);
+        });
+    </script>
+</body>
+</html>
