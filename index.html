@@ -35,7 +35,7 @@
                         <li class="items-navbar"><a href="Blogs.html">Blogs</a></li>
                         <li class="items-navbar"><a href="About.html">About</a></li>
                     </ul>
-                    <img src="Images/dark_mode.png" alt="" class="dark-icon" width="30px" />
+                    <img src="Images/dark_mode.png" alt="" class="dark-icon" id="dark-icon" width="30px" />
                     <img src="Images/menu-icon.png" alt="" class="menu-icon" id="menu-icon" width="30px" />
                 </div>
             </nav>
@@ -46,18 +46,17 @@
         <!-- home intro content -->
         <div class="intro-box flex center fs19">
             <div class="intro-box1 center">
-                <div class="intro-in-box center">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, sit
-                    possimus? Maxiunt! Fuga.
+                <div class="intro-in-box center"><p>Welcome to Coolboymannu.me, your ultimate coding hub! Join me, a passionate programmer and college student, on a journey of learning, exploration, and sharing insights into the world of coding.</p>
+
                 </div>
             </div>
-            <div class="intro-box2 center">
-                <div class="intro-in-box">Lorem ipsum dolor sit amet conse</div>
-            </div>
+            <!-- <div class="intro-box2 center">
+                <div class="intro-in-box"></div>
+            </div> -->
             <div class="intro-box3 center">
                 <div class="intro-in-box">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, sit
-                    possimus? Maxe sunt! Fuga.
+                    <p>Hello, I'm Coolboymannu, a dedicated programmer and college student. With a fervor for coding, I aim to create a vibrant community for learners. Let's embark on this coding adventure together!</p>
+
                 </div>
             </div>
         </div>
@@ -174,11 +173,20 @@
         <div class="foot">Copyright © 2023 Coolboymannu.me</div>
     </footer>
     <script>
-        const menu = document.getElementById("menu-icon");
-        const listbox = document.getElementById("hidden-box");
-        menu.addEventListener("click", () => {
-            listbox.classList.toggle("active");
-        });
+        const menu = document.getElementById('menu-icon');
+const listbox = document.getElementById('hidden-box');
+
+menu.addEventListener('click', (event) => {
+    event.stopPropagation(); // Prevent the click event from reaching the document
+    listbox.classList.toggle('active');
+});
+
+document.addEventListener('click', (event) => {
+    if (!listbox.contains(event.target) && event.target !== menu) {
+        listbox.classList.remove('active');
+    }
+});
+
         
         function copyToClipboard() {
       const couponCode = "HFJQR3784";
@@ -191,6 +199,7 @@
         document.body.removeChild(inputElement);
      alert("Coupon code copied: " + couponCode);
     };
+
     </script>
 </body>
 

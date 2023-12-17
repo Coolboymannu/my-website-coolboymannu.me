@@ -104,13 +104,29 @@
         </div>
     </footer>
     <script>
-        const menu = document.getElementById('menu-icon')
-        const listbox = document.getElementById('hidden-box')
-        menu.addEventListener('click' , ()=>{
-            listbox.classList.toggle('active');
-        })
+           const menu = document.getElementById('menu-icon');
+const listbox = document.getElementById('hidden-box');
+
+menu.addEventListener('click', (event) => {
+    event.stopPropagation(); // Prevent the click event from reaching the document
+    listbox.classList.toggle('active');
+});
+
+document.addEventListener('click', (event) => {
+    if (!listbox.contains(event.target) && event.target !== menu) {
+        listbox.classList.remove('active');
+    }
+});
+
+
+            // Hide the menu when clicking anywhere on the page
+            document.addEventListener('click', function () {
+                listBox.classList.remove('active');
+                menuIcon.classList.remove('active'); // Remove the active class from the menu icon
+            });
 
         // donwnoad Notification
+
         document.addEventListener('DOMContentLoaded', function () {
             const downloadButtons = document.querySelectorAll('.download-button');
 
@@ -123,7 +139,7 @@
                     setTimeout(function () {
                         // Close the notification after a delay
                         closeNotification();
-                    }, 3000); // Adjust the delay (in milliseconds) as needed
+                    }, 1800);
                 });
             });
 

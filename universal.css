@@ -62,8 +62,9 @@
 }
 
 .items-navbar a {
-    font-size: 20px;
+    font-size: 22px;
     transition: 0.3s;
+    color: black;
 }
 
 .items-navbar a:hover {
@@ -248,6 +249,7 @@
 }
 .notification {
     position: fixed;
+    width: 300px;
     top: 10px;
     right: 10px;
     background-color: #4CAF50;
@@ -255,5 +257,30 @@
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 999;
+    z-index: 1999;
+}
+.dark-icon.active {
+    
+    filter: brightness(50%); /* Adjust the brightness for the dark icon */
+}
+/* Add this at the end of your CSS file */
+
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #fff;
+    /* Add any other styles for dark mode */
+}
+
+.dark-mode .footerbox {
+    background-color: #333;
+    /* Add any other styles for specific elements in dark mode */
+}
+
+.dark-mode .navbar {
+    background-color: #2d2d2d;
+    /* Add any other styles for specific elements in dark mode */
+}
+
+.dark-icon{
+    display:none;
 }

@@ -65,11 +65,20 @@
         </div>
     </footer>
     <script>
-        const menu = document.getElementById('menu-icon')
-        const listbox = document.getElementById('hidden-box')
-        menu.addEventListener('click' , ()=>{
-            listbox.classList.toggle('active');
-        })
+        const menu = document.getElementById('menu-icon');
+const listbox = document.getElementById('hidden-box');
+
+menu.addEventListener('click', (event) => {
+    event.stopPropagation(); // Prevent the click event from reaching the document
+    listbox.classList.toggle('active');
+});
+
+document.addEventListener('click', (event) => {
+    if (!listbox.contains(event.target) && event.target !== menu) {
+        listbox.classList.remove('active');
+    }
+});
+
 
 
     </script>

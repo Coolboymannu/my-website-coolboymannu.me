@@ -1,0 +1,70 @@
+*{
+    list-style:circle;
+}
+.about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.about-me img {
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.skills {
+    background-color: #f2f2f2;
+    padding: 40px;
+    /* justify-content: space-evenly; */
+    /* width: 100%; */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+.skill{
+    width: 25%;
+}
+
+.channel-link{
+    color: rgb(164, 38, 38);
+}
+.box2{
+    width: 60%;
+    justify-content: space-evenly;
+    list-style: square;
+    
+}
+.skill{
+
+}
+
+@media screen and (max-width: 430px){
+.skills{
+    flex-direction: column;
+    padding: 20px;
+}
+.skill{
+    display: inline;
+
+}
+.box2{
+    width: 100%;
+    justify-content: space-evenly;
+    
+}
+}
+

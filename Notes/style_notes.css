@@ -18,7 +18,7 @@
 }
 
 .items-box {
-    width: 55%;
+    width: 500px;
     height: 300px;
     justify-content: center;
     min-width: 400px;
@@ -70,8 +70,71 @@
     width: 162px;
 }
 
-@media screen and (max-width: 520px){
-
+@media screen and (max-width: 900px){
+    .items-box{
+        min-width: 320px;
+        font-size: 20px;
+    }
+    .items-box h3{
+        font-size: 21px;
+    }
+    .download-button {
+        padding: 10px 15px;
+        margin-left: 3px;
+        font-size: 17px;
+    }
+    
+          
+}
+@media screen and (max-width: 700px){
+    .items-box{
+        min-width: 250px;
+        font-size: 17px;
+    }
+    .items-box h3{
+        font-size: 18px;
+    }
+    .download-button {
+        padding: 5px 8px;
+        margin-left: 2px;
+        font-size: 15px;
+    }
+    
+          
+}
+@media screen and (max-width: 540px){
+    .items-box{
+        min-width: 350px;
+        height: 330px;
+        font-size: 20px;
+    }
+    .items-box h3{
+        font-size: 25px;
+    }
+    .download-button {
+        padding: 10px 15px;
+        margin-left: 5px;
+        font-size: 18px;
+    }
+    
+          
+}
+@media screen and (max-width: 380px){
+    .items-box{
+        min-width: 300px;
+        height: 330px;
+        font-size: 17px;
+        text-align: center;
+    }
+    .items-box h3{
+        font-size: 23px;
+    }
+    .download-button {
+        padding: 8px 12px;
+        margin-left: 3px;
+        font-size: 16px;
+    }
+    
           
 }
 
