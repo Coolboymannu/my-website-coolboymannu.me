@@ -45,7 +45,8 @@
 }
 .download-button {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 13px 20px;
+    margin-left: 5px;
     font-size: 18px;
     font-weight: bold;
     text-align: center;
@@ -68,3 +69,9 @@
 .py{
     width: 162px;
 }
+
+@media screen and (max-width: 520px){
+
+          
+}
+

@@ -1,0 +1,86 @@
+.heading-pyq{
+    text-align: center;
+    margin: 15px 10px;
+    color: rgb(15 108 106);
+}
+
+.heading-pyq>span{
+    font-weight: 900;
+    color: black;
+}
+
+.main-box{
+    margin: 40px 30px;
+    justify-content: center;
+    flex-direction:column;
+    border: 5px solid rgb(15 108 106);
+    border-radius: 20px;
+}
+
+.inner-box{
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.item-box {
+    width: 220px;
+    text-align: center;
+    justify-content: flex-end;
+    height: 280px;
+    min-width: 200px;
+    border: 3px solid rgba(15, 108, 107, 0.759);
+    margin: 20px 20px;
+    flex-direction: column;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.item-box:hover {
+    transform: scale(1.04);
+}
+
+.pap{
+    background-color: rgba(255, 255, 255, 0.534);
+    width: 100%;
+    align-items: center;
+    justify-content:;
+}
+
+.box1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.4)), url(images/python-1.jpg);
+    background-size: cover;
+}
+.box2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.4)), url(images/python-1.jpg);
+    background-size: cover;
+}
+.box3{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.4)), url(images/python-1.jpg);
+    background-size: cover;
+}
+.box4{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.4)), url(images/python-1.jpg);
+    background-size: cover;
+}
+.box5{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.4)), url(images/python-1.jpg);
+    background-size: cover;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 5px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(18, 127, 125);
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    margin:10px 0 15px 0;
+}
+
+.download-button:hover {
+    background-color: rgb(36, 104, 149);
+}
